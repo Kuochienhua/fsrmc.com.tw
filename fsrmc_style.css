@@ -1,0 +1,381 @@
+html,body {
+    padding: 0;
+    margin: 0;
+    font-family: "Microsoft JhengHei";
+    font-family: "Fantasy";
+}
+a {
+    text-decoration: none;
+    color: #072A40;
+}
+a:hover {
+    text-decoration: none;
+    color: #18B7BE;
+}
+.ahover{
+    text-decoration: none;
+    color: #178CA4;
+}
+.ahover:hover{
+    text-decoration: none;
+    color: #18B7BE;
+}
+.form-control[type=text]:focus {
+    outline: solid #18B7BE;
+    color: #18B7BE;
+}
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem #072A40;
+}
+.accordion-button:not(.collapsed) {
+    color: #072A40;
+    background-color: #F9F7F0;
+}
+.accordion-button::after {
+    background-image: url(/img/plus-square.svg);
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url(/img/x-square.svg);
+}
+.top {
+    background-color: #FFF;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.cirimg {
+    width: 100px;
+    height: 100px;
+}
+.facbg {
+    width: 100%;
+    background-image: url(/img/bg2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.introduce {
+    width: 100%;
+    background-image: url(/img/bg1.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.footer {
+    height: 100%;
+    width: 100%;
+    font-size: 0.8vw;
+    font-weight:bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.connection {
+    text-align: left;
+    font-size: 2vh;
+}
+.imgw {
+    width: 65%;
+}
+.divpdf {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.bdrd {
+    border-radius:15px;
+}
+/*文字凸排*/
+.indent{
+    text-indent: -1.5em;
+    margin-left: 1.5em;
+    margin-bottom: 0;
+}
+/*swiper的設定*/
+:root {
+    --swiper-theme-color: #072A40 !important;
+    --swiper-navigation-size: 30px !important;
+}
+/*背景顏色*4種*/
+.bibg {
+    background-color: #F9F7F0;
+}
+.cibg {
+    background-color: #18B7BE;
+}
+.tibg {
+    background-color: #178CA4;
+}
+.pibg {
+    background-color: #072A40;
+}
+/*文字顏色*4種*/
+.bifac {
+    color: #F9F7F0;
+}
+.cifac {
+    color: #18B7BE;
+}
+.tifac {
+    color: #178CA4;
+}
+.pifac {
+    color: #072A40;
+}
+/*圖片縮放*/
+.imgtran {
+    transition: all 1s ease-out;
+}
+.imgtran:hover {
+    transform:scale(1.1,1.1);
+}
+/*某些RWD設定*/
+@media screen and (max-width: 992px) {
+    .top {
+        width: 100%;
+        display: block;
+    }
+    .imgw {
+        width: 85%;
+    }
+    .connection {
+        width: 60%;
+    }
+}
+/*邊框特效*/
+.box {
+    border: 5px solid #262b57;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    transform: rotate(-3deg);
+    font-size: 40px;
+    text-align: center;
+    line-height: 120px;
+}
+.dashed {
+    border-style: dashed;
+}
+.item {
+    position: relative;
+    border: 1px solid #072A40;
+    cursor: pointer;
+    border-width: 5px;
+}
+.item::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s;
+    border: 2px solid #178CA4;
+    top: -15px;
+    left: -15px;
+    border-right: none;
+    border-bottom: none
+}
+.item::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s;
+    border: 2px solid #178CA4;
+    bottom: -15px;
+    right: -15px;
+    border-left: none;
+    border-top: none
+}
+.item:hover::before {
+    width: calc(100% + 15px + 13px);
+    height: calc(100% + 15px + 13px);
+}
+.item:hover::after {
+    width: calc(100% + 15px + 13px);
+    height: calc(100% + 15px + 13px);
+}
+/*時間軸的css*/
+.time {
+    display: var(--timeDisplay, inline-flex);
+    padding: var(--timePadding, .25rem 1.25rem .25rem);
+    background-color: var(--timeBackgroundColor, #18B7BE);
+    font-size: var(--timeFontSize, 1.2rem);
+    font-weight: var(--timeFontWeight, 700);
+    text-transform: var(--timeTextTransform, uppercase);
+    color: var(--timeColor, #F9F7F0);
+}
+.card {
+    padding: var(--timelineCardPadding, 1.5rem 1.5rem 1.25rem);
+    border-radius: var(--timelineCardBorderRadius, 2px);
+    border-left: var(--timelineCardBorderLeftWidth, 3px) solid var(--timelineCardBorderLeftColor, var(--uiTimelineMainColor));
+    box-shadow: var(--timelineCardBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+    background-color: var(--timelineCardBackgroundColor, #FFF);
+}
+.timeline {
+    display: var(--timelineDisplay, grid);
+    grid-row-gap: var(--timelineGroupsGap, 2rem);
+    --uiTimelineMainColor: var(--timelineMainColor, #18B7BE);
+    --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #FFF);
+    border-left: var(--timelineLineWidth, 3px) solid var(--timelineLineBackgroundColor, var(--uiTimelineMainColor));
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    --timelineMainColor: #178CA4;
+}
+.timeline__year {
+    margin-bottom: 1.25rem;
+    --timePadding: var(--timelineYearPadding, .5rem 1.5rem);
+    --timeColor: var(--uiTimelineSecondaryColor);
+    --timeBackgroundColor: var(--uiTimelineMainColor);
+    --timeFontWeight: var(--timelineYearFontWeight, 400);
+}
+.timeline__card {
+    position: relative;
+    margin-left: var(--timelineCardLineGap, 1rem);
+}
+.timeline__cards {
+    display: var(--timeloneCardsDisplay, grid);
+    grid-row-gap: var(--timeloneCardsGap, 1.5rem);
+    overflow: hidden;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+.page {
+    max-width: 47rem;
+    padding: 5rem 2rem 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.divbtn {
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    color: #072A40;
+}
+.divbtn:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border: 6px solid #072A40;
+}
+.divbtn:after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    border: 6px solid #18B7BE;
+    transition: all 0.3s 0.2s;
+}
+/*按鈕特效*/
+.btn2 {
+    position: relative;
+    z-index: 1;
+    min-width: 200px;
+    background-color: transparent;
+    border: none;
+    color: #072A40;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.5s;
+    padding: 12px 20px;
+}
+.btn2:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border: 6px solid #072A40;
+}
+.btn2:after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    border: 6px solid #18B7BE;
+    transition: all 0.3s 0.2s;
+}
+.btn2:hover {
+    color: #F9F7F0;
+}
+.btn2:hover:after {
+    transition: all 0.3s;
+    left: 0;
+    top: 0;
+}
+.btn2 .inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+.btn2 .inner .blob {
+    position: absolute;
+    top: 6px;
+    width: 25%;
+    height: 100%;
+    background: #072A40;
+    border-radius: 100%;
+    transform: translate3d(0, 150%, 0) scale(1.7);
+    transition: transform 0.5s;
+}
+.btn2 .inner .blob:nth-child(1) {
+    left: 0%;
+    transition-delay: 0s;
+}
+.btn2 .inner .blob:nth-child(2) {
+    left: 30%;
+    transition-delay: 0.08s;
+}
+.btn2 .inner .blob:nth-child(3) {
+    left: 60%;
+    transition-delay: 0.16s;
+}
+.btn2 .inner .blob:nth-child(4) {
+    left: 90%;
+    transition-delay: 0.24s;
+}
+.btn2:hover .inner .blob {
+    transform: translateZ(0) scale(1.7);
+}
+.btn3 {
+    background: #F9F7F0;
+    border: none;
+}
+.btn3:hover {
+    background:#178CA4;
+    color: #F9F7F0;
+}
+.btn4 {
+    background: #072A40;
+    color: #F9F7F0;
+    border: none;
+}
+.btn4:hover {
+    background:#178CA4;
+    color: #F9F7F0;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #072A40;
+}
